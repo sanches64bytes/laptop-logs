@@ -1,8 +1,11 @@
 # 🖥️ laptop-logs
 
 **Versão:** 0.1.0
+
 **Status:** Em desenvolvimento
+
 **Uso:** Pessoal
+
 **Testado em:** Arch Linux (KDE Plasma)
 
 ---
