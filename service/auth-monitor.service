@@ -1,0 +1,15 @@
+[Unit]
+Description=Authentication Monitor
+After=systemd-journald.service systemd-logind.service
+Wants=systemd-journald.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/devsanches/Desktop/laptop-logs/src
+ExecStart=/home/devsanches/Desktop/laptop-logs/.venv/bin/python /home/devsanches/Desktop/laptop-logs/src/main.py
+Restart=always
+RestartSec=2
+User=root
+
+[Install]
+WantedBy=multi-user.target
