@@ -1,7 +1,7 @@
 [project]
 name = "laptop-logs"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sistema de monitoramento e registro de eventos do laptop em tempo real."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
