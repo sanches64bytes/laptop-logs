@@ -7,7 +7,7 @@ def get_locked() -> bool:
     result = subprocess.run(
         ["loginctl", "show-session", "2", "-p", "LockedHint", "--value"],
         capture_output=True,
-        text=True
+        text=True,
     )
     return result.stdout.strip() == "yes"
 
@@ -17,7 +17,7 @@ def listen(callback):
     It monitors session events; whenever an event occurs, we will notify you
     via the callback.
     """
-    
+
     is_locked = get_locked()
 
     while True:
@@ -25,4 +25,4 @@ def listen(callback):
         if current ^ is_locked:
             is_locked = current
             callback(3 if is_locked else 4)
-        sleep(.5)
+        sleep(0.5)

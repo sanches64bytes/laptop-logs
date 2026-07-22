@@ -39,8 +39,8 @@ def take_photo_safe(filename: str):
 
 def event_callback(event_type: int):
     """This callback is called whenever an event occurs."""
-    
-    create_folders() 
+
+    create_folders()
     event_name = EVENT_TYPE[event_type]
     event_now = datetime.now()
     filename = event_now.strftime(f"photos/photo_{event_type}_%d-%m-%Y_%H:%M:%S.jpg")
